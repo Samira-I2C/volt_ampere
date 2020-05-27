@@ -1,0 +1,344 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 3
+Title "Messwerterfassung nur Strom"
+Date "2020-01-15"
+Rev "1.0"
+Comp "SY Samira"
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Device:R R2
+U 1 1 5E174E8F
+P 5000 3500
+F 0 "R2" H 5070 3546 50  0000 L CNN
+F 1 "3k9" H 5070 3455 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 4930 3500 50  0001 C CNN
+F 3 "~" H 5000 3500 50  0001 C CNN
+	1    5000 3500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R1
+U 1 1 5E175615
+P 4700 3500
+F 0 "R1" H 4770 3546 50  0000 L CNN
+F 1 "3k9" H 4770 3455 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 4630 3500 50  0001 C CNN
+F 3 "~" H 4700 3500 50  0001 C CNN
+	1    4700 3500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8550 3500 8450 3500
+$Comp
+L power:+12V #PWR01
+U 1 1 5E1D4DCC
+P 8450 1150
+F 0 "#PWR01" H 8450 1000 50  0001 C CNN
+F 1 "+12V" H 8465 1323 50  0000 C CNN
+F 2 "" H 8450 1150 50  0001 C CNN
+F 3 "" H 8450 1150 50  0001 C CNN
+	1    8450 1150
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GNDD #PWR02
+U 1 1 5E1D9C87
+P 8450 5550
+F 0 "#PWR02" H 8450 5300 50  0001 C CNN
+F 1 "GNDD" H 8454 5395 50  0000 C CNN
+F 2 "" H 8450 5550 50  0001 C CNN
+F 3 "" H 8450 5550 50  0001 C CNN
+	1    8450 5550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8550 3800 8450 3800
+NoConn ~ 3950 3750
+Wire Wire Line
+	3950 3850 4150 3850
+$Comp
+L Connector:Conn_01x04_Female J6
+U 1 1 5E1822BC
+P 8750 3600
+F 0 "J6" H 8778 3576 50  0000 L CNN
+F 1 "I2C_Conn_12V" H 8778 3485 50  0000 L CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x04_P2.54mm_Vertical" H 8750 3600 50  0001 C CNN
+F 3 "~" H 8750 3600 50  0001 C CNN
+	1    8750 3600
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x03_Female J1
+U 1 1 5E32DD5D
+P 2850 5200
+F 0 "J1" V 2800 4800 50  0000 L CNN
+F 1 "Stromsensor_01" V 2900 4750 50  0000 L CNN
+F 2 "" H 2850 5200 50  0001 C CNN
+F 3 "~" H 2850 5200 50  0001 C CNN
+	1    2850 5200
+	0    1    1    0   
+$EndComp
+$Comp
+L Connector:Conn_01x03_Female J3
+U 1 1 5E34B564
+P 3650 5200
+F 0 "J3" V 3600 4800 50  0000 L CNN
+F 1 "Stromsensor_02" V 3700 4750 50  0000 L CNN
+F 2 "" H 3650 5200 50  0001 C CNN
+F 3 "~" H 3650 5200 50  0001 C CNN
+	1    3650 5200
+	0    1    1    0   
+$EndComp
+$Comp
+L Connector:Conn_01x03_Female J4
+U 1 1 5E3728E3
+P 4450 5200
+F 0 "J4" V 4400 4800 50  0000 L CNN
+F 1 "Stromsensor_03" V 4500 4750 50  0000 L CNN
+F 2 "" H 4450 5200 50  0001 C CNN
+F 3 "~" H 4450 5200 50  0001 C CNN
+	1    4450 5200
+	0    1    1    0   
+$EndComp
+Text Notes 3600 3900 1    50   ~ 0
+AD-Wandler
+Text Notes 6300 3400 2    50   ~ 0
+DCDC Wandler
+$Comp
+L Connector:Conn_01x03_Female J5
+U 1 1 5E330CAE
+P 5250 5200
+F 0 "J5" V 5200 4800 50  0000 L CNN
+F 1 "Stromsensor_04" V 5300 4750 50  0000 L CNN
+F 2 "" H 5250 5200 50  0001 C CNN
+F 3 "~" H 5250 5200 50  0001 C CNN
+	1    5250 5200
+	0    1    1    0   
+$EndComp
+$Comp
+L Interface_Expansion:P82B96 U1
+U 1 1 5E357724
+P 7450 3900
+F 0 "U1" H 7000 4450 50  0000 C CNN
+F 1 "P82B96" H 7700 4450 50  0000 C CNN
+F 2 "" H 7450 3900 50  0001 C CNN
+F 3 "http://www.nxp.com/documents/data_sheet/P82B96.pdf" H 7450 3900 50  0001 C CNN
+	1    7450 3900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8450 1150 8450 3250
+Connection ~ 8450 3250
+Wire Wire Line
+	8450 3250 8450 3500
+Wire Wire Line
+	8250 3700 8550 3700
+Wire Wire Line
+	8050 3600 8150 3600
+Wire Wire Line
+	8050 3800 8150 3800
+Wire Wire Line
+	8150 3800 8150 3600
+Connection ~ 8150 3600
+Wire Wire Line
+	8150 3600 8550 3600
+Wire Wire Line
+	8050 4000 8250 4000
+Connection ~ 8250 4000
+Wire Wire Line
+	8250 4000 8250 3700
+Wire Wire Line
+	8050 4200 8250 4200
+Wire Wire Line
+	8250 4200 8250 4000
+Wire Wire Line
+	6850 3600 6800 3600
+Wire Wire Line
+	6800 3600 6800 3250
+Wire Wire Line
+	6700 3450 6700 4200
+Wire Wire Line
+	6850 4200 6700 4200
+Connection ~ 6700 4200
+Wire Wire Line
+	6800 3250 8450 3250
+Wire Wire Line
+	4700 3350 4700 3250
+Connection ~ 4700 3250
+Wire Wire Line
+	5000 3350 5000 3250
+Connection ~ 5000 3250
+Wire Wire Line
+	5000 3250 4700 3250
+Wire Wire Line
+	5000 3650 5000 4000
+Wire Wire Line
+	4700 3650 4700 3800
+$Sheet
+S 3400 3150 550  1100
+U 5E1F6B8F
+F0 "ADS1115" 50
+F1 "ADS1115.sch" 50
+F2 "Gnd" I R 3950 3350 50 
+F3 "Vcc" I R 3950 3250 50 
+F4 "Addr" I R 3950 3650 50 
+F5 "Alert" I R 3950 3750 50 
+F6 "A0" I R 3950 3850 50 
+F7 "A1" I R 3950 3950 50 
+F8 "A2" I R 3950 4050 50 
+F9 "A3" I R 3950 4150 50 
+F10 "SCL" I R 3950 3450 50 
+F11 "SDA" I R 3950 3550 50 
+$EndSheet
+$Sheet
+S 5750 3200 550  300 
+U 5E339291
+F0 "AMS1117-5.0" 50
+F1 "AMS1117-5.0.sch" 50
+F2 "VI" I R 6300 3250 50 
+F3 "VO" O L 5750 3250 50 
+F4 "Gnd" O L 5750 3450 50 
+F5 "Gnd" I R 6300 3450 50 
+$EndSheet
+$Comp
+L Connector:Conn_01x01_Male J2
+U 1 1 5E334FC6
+P 4200 3650
+F 0 "J2" H 4300 3600 50  0000 R CNN
+F 1 "Addr" H 4350 3700 50  0000 R CNN
+F 2 "" H 4200 3650 50  0001 C CNN
+F 3 "~" H 4200 3650 50  0001 C CNN
+	1    4200 3650
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	3950 3650 4000 3650
+Wire Wire Line
+	3550 4950 3550 5000
+Wire Wire Line
+	4350 5000 4350 4950
+Connection ~ 4350 4950
+Wire Wire Line
+	4350 4950 3550 4950
+Wire Wire Line
+	5150 5000 5150 4950
+Wire Wire Line
+	5150 4950 4350 4950
+Wire Wire Line
+	4150 3850 4150 4750
+Wire Wire Line
+	3750 5000 3750 4650
+Wire Wire Line
+	4450 4150 4450 4750
+Wire Wire Line
+	3950 4150 4450 4150
+Wire Wire Line
+	3750 4650 4550 4650
+Wire Wire Line
+	5350 5000 5350 4650
+Wire Wire Line
+	4550 5000 4550 4650
+Connection ~ 4550 4650
+Wire Wire Line
+	4350 4850 4350 4050
+Wire Wire Line
+	3950 4050 4350 4050
+Wire Wire Line
+	4250 3950 4250 4850
+Wire Wire Line
+	3950 3950 4250 3950
+Wire Wire Line
+	4450 4750 5250 4750
+Wire Wire Line
+	5250 4750 5250 5000
+Wire Wire Line
+	4350 4850 4450 4850
+Wire Wire Line
+	4450 4850 4450 5000
+Wire Wire Line
+	2850 4750 2850 5000
+Wire Wire Line
+	2850 4750 4150 4750
+Wire Wire Line
+	3650 5000 3650 4850
+Wire Wire Line
+	3650 4850 4250 4850
+Wire Wire Line
+	3750 4650 2950 4650
+Wire Wire Line
+	2950 4650 2950 5000
+Connection ~ 3750 4650
+Wire Wire Line
+	3550 4950 2750 4950
+Wire Wire Line
+	2750 4950 2750 5000
+Connection ~ 3550 4950
+Wire Wire Line
+	4450 4000 4450 3450
+Wire Wire Line
+	4450 4000 5000 4000
+Wire Wire Line
+	4350 3800 4350 3550
+Wire Wire Line
+	4350 3800 4700 3800
+Wire Wire Line
+	3950 3550 4350 3550
+Wire Wire Line
+	3950 3450 4450 3450
+Wire Wire Line
+	4550 4100 4550 3350
+Wire Wire Line
+	3950 3350 4550 3350
+Wire Wire Line
+	5150 4950 5150 4100
+Wire Wire Line
+	4550 4100 5150 4100
+Connection ~ 5150 4950
+Connection ~ 5150 4100
+Wire Wire Line
+	3950 3250 4700 3250
+Wire Wire Line
+	4550 4650 5350 4650
+Wire Wire Line
+	4700 3800 6850 3800
+Connection ~ 4700 3800
+Wire Wire Line
+	5000 4000 6850 4000
+Connection ~ 5000 4000
+Wire Wire Line
+	5350 4650 5350 3250
+Connection ~ 5350 4650
+Connection ~ 5350 3250
+Wire Wire Line
+	5450 4100 5450 3450
+Wire Wire Line
+	5150 4100 5450 4100
+Wire Wire Line
+	5450 3450 5750 3450
+Wire Wire Line
+	5350 3250 5750 3250
+Wire Wire Line
+	5000 3250 5350 3250
+Wire Wire Line
+	6300 3250 6800 3250
+Connection ~ 6800 3250
+Wire Wire Line
+	6300 3450 6700 3450
+Wire Wire Line
+	6700 4550 8450 4550
+Connection ~ 8450 4550
+Wire Wire Line
+	8450 4550 8450 5550
+Wire Wire Line
+	6700 4200 6700 4550
+Wire Wire Line
+	8450 3800 8450 4550
+$EndSCHEMATC
