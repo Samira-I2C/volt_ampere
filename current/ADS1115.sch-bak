@@ -14,12 +14,12 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L Analog_ADC:ADS1115IDGS U1
+L Analog_ADC:ADS1115IDGS U2
 U 1 1 5E458702
 P 5550 3700
-AR Path="/5E1F6B8F/5E458702" Ref="U1"  Part="1" 
+AR Path="/5E1F6B8F/5E458702" Ref="U2"  Part="1" 
 AR Path="/5E339291/5E458702" Ref="U?"  Part="1" 
-F 0 "U1" H 5550 4381 50  0000 C CNN
+F 0 "U2" H 5550 4381 50  0000 C CNN
 F 1 "ADS1115IDGS" H 5550 4290 50  0000 C CNN
 F 2 "Package_SO:TSSOP-10_3x3mm_P0.5mm" H 5550 3200 50  0001 C CNN
 F 3 "http://www.ti.com/lit/ds/symlink/ads1113.pdf" H 5500 2800 50  0001 C CNN

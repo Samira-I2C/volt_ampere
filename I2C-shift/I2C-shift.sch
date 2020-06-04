@@ -1,0 +1,332 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title "I2C Level shifting and multiplexing"
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Interface_Expansion:P82B96 U2
+U 1 1 5EDB8D09
+P 6950 3350
+F 0 "U2" H 6950 3967 50  0000 C CNN
+F 1 "P82B96" H 6950 3876 50  0000 C CNN
+F 2 "" H 6950 3350 50  0001 C CNN
+F 3 "http://www.nxp.com/documents/data_sheet/P82B96.pdf" H 6950 3350 50  0001 C CNN
+	1    6950 3350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Interface_Expansion:TCA9548AMRGER U1
+U 1 1 5EDBCB16
+P 4650 4200
+F 0 "U1" V 4900 5050 50  0000 L CNN
+F 1 "TCA9548AMRGER" V 4200 3900 50  0000 L CNN
+F 2 "Package_DFN_QFN:Texas_RGE0024C_EP2.1x2.1mm" H 4650 3200 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/tca9548a.pdf" H 4700 4450 50  0001 C CNN
+	1    4650 4200
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5350 3450 5550 3450
+Wire Wire Line
+	5350 3450 5350 3800
+Wire Wire Line
+	5250 3250 5250 3800
+Wire Wire Line
+	3600 3650 3600 4200
+Wire Wire Line
+	3600 4200 3650 4200
+$Comp
+L Device:R R3
+U 1 1 5EDC4F33
+P 5250 3050
+F 0 "R3" H 5320 3096 50  0000 L CNN
+F 1 "3k9" H 5320 3005 50  0000 L CNN
+F 2 "" V 5180 3050 50  0001 C CNN
+F 3 "~" H 5250 3050 50  0001 C CNN
+	1    5250 3050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R4
+U 1 1 5EDC5F1B
+P 5550 3050
+F 0 "R4" H 5620 3096 50  0000 L CNN
+F 1 "3k9" H 5620 3005 50  0000 L CNN
+F 2 "" V 5480 3050 50  0001 C CNN
+F 3 "~" H 5550 3050 50  0001 C CNN
+	1    5550 3050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6150 3050 6350 3050
+Wire Wire Line
+	5250 3200 5250 3250
+Connection ~ 5250 3250
+Wire Wire Line
+	5550 3200 5550 3450
+Connection ~ 5550 3450
+Wire Wire Line
+	5250 2900 5250 2850
+Wire Wire Line
+	5250 2850 5550 2850
+Wire Wire Line
+	5550 2850 5550 2900
+Wire Wire Line
+	6150 2850 6150 3050
+Connection ~ 5550 2850
+Connection ~ 6150 3050
+$Comp
+L Connector:Conn_01x04_Male J3
+U 1 1 5EDC76AF
+P 8250 3050
+F 0 "J3" H 8300 3250 50  0000 R CNN
+F 1 "I2C/12V" H 8200 3000 50  0000 R CNN
+F 2 "" H 8250 3050 50  0001 C CNN
+F 3 "~" H 8250 3050 50  0001 C CNN
+	1    8250 3050
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x04_Male J1
+U 1 1 5EDC8EDD
+P 2900 2950
+F 0 "J1" H 2950 3150 50  0000 C CNN
+F 1 "I2C/5V" H 2700 2900 50  0000 C CNN
+F 2 "" H 2900 2950 50  0001 C CNN
+F 3 "~" H 2900 2950 50  0001 C CNN
+	1    2900 2950
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x04_Male J2
+U 1 1 5EDC98C1
+P 2900 3450
+F 0 "J2" H 2950 3150 50  0000 C CNN
+F 1 "I2C/5V" H 2700 3400 50  0000 C CNN
+F 2 "" H 2900 3450 50  0001 C CNN
+F 3 "~" H 2900 3450 50  0001 C CNN
+	1    2900 3450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5250 2850 4100 2850
+Connection ~ 5250 2850
+Wire Wire Line
+	3200 2850 3200 3350
+Connection ~ 3200 2850
+Wire Wire Line
+	3200 2850 3100 2850
+Wire Wire Line
+	3100 3350 3200 3350
+Wire Wire Line
+	3100 3650 3300 3650
+Connection ~ 3600 3650
+Wire Wire Line
+	3100 3150 3300 3150
+Wire Wire Line
+	3300 3150 3300 3650
+Connection ~ 3300 3650
+Wire Wire Line
+	3300 3650 3600 3650
+Wire Wire Line
+	3100 2950 3500 2950
+Wire Wire Line
+	3500 2950 3500 3250
+Wire Wire Line
+	3500 4700 5250 4700
+Wire Wire Line
+	5250 4700 5250 4600
+Wire Wire Line
+	3100 3050 3400 3050
+Wire Wire Line
+	3400 3050 3400 3350
+Wire Wire Line
+	3400 4800 5350 4800
+Wire Wire Line
+	5350 4800 5350 4600
+Wire Wire Line
+	3100 3450 3500 3450
+Connection ~ 3500 3450
+Wire Wire Line
+	3500 3450 3500 4700
+Wire Wire Line
+	3100 3550 3400 3550
+Connection ~ 3400 3550
+Wire Wire Line
+	3400 3550 3400 4800
+Wire Wire Line
+	7550 3050 7650 3050
+Wire Wire Line
+	7650 3050 7650 3250
+Wire Wire Line
+	7650 3250 7550 3250
+Wire Wire Line
+	8050 3050 7650 3050
+Connection ~ 7650 3050
+Wire Wire Line
+	8050 3150 7750 3150
+Wire Wire Line
+	7750 3150 7750 3450
+Wire Wire Line
+	7750 3650 7750 3450
+Connection ~ 7750 3450
+Wire Wire Line
+	7550 3450 7750 3450
+Wire Wire Line
+	7550 3650 7750 3650
+$Comp
+L Regulator_Linear:AMS1117-5.0 U3
+U 1 1 5EDD656E
+P 6950 4200
+F 0 "U3" H 6950 4442 50  0000 C CNN
+F 1 "AMS1117-5.0" H 6950 4351 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-223-3_TabPin2" H 6950 4400 50  0001 C CNN
+F 3 "http://www.advanced-monolithic.com/pdf/ds1117.pdf" H 7050 3950 50  0001 C CNN
+	1    6950 4200
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	6650 4200 6150 4200
+Wire Wire Line
+	7250 4200 7850 4200
+Wire Wire Line
+	7850 4200 7850 2950
+Wire Wire Line
+	7850 2950 8050 2950
+Wire Wire Line
+	6950 4500 6950 4550
+Wire Wire Line
+	6950 4550 7850 4550
+Wire Wire Line
+	7950 4550 7950 3250
+Wire Wire Line
+	7950 3250 8050 3250
+Connection ~ 6950 4550
+$Comp
+L Device:C C1
+U 1 1 5EDDE861
+P 5850 3050
+F 0 "C1" H 5965 3096 50  0000 L CNN
+F 1 "100nF" H 5850 2950 50  0000 L CNN
+F 2 "" H 5888 2900 50  0001 C CNN
+F 3 "~" H 5850 3050 50  0001 C CNN
+	1    5850 3050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6150 3050 6150 4200
+Wire Wire Line
+	5550 2850 5850 2850
+$Comp
+L power:GND #PWR02
+U 1 1 5EDEC26B
+P 7850 5150
+F 0 "#PWR02" H 7850 4900 50  0001 C CNN
+F 1 "GND" H 7855 4977 50  0000 C CNN
+F 2 "" H 7850 5150 50  0001 C CNN
+F 3 "" H 7850 5150 50  0001 C CNN
+	1    7850 5150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7850 5150 7850 4550
+Connection ~ 7850 4550
+Wire Wire Line
+	7850 4550 7950 4550
+$Comp
+L power:+12V #PWR01
+U 1 1 5EDEDBD3
+P 7850 2100
+F 0 "#PWR01" H 7850 1950 50  0001 C CNN
+F 1 "+12V" H 7865 2273 50  0000 C CNN
+F 2 "" H 7850 2100 50  0001 C CNN
+F 3 "" H 7850 2100 50  0001 C CNN
+	1    7850 2100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7850 2100 7850 2950
+Connection ~ 7850 2950
+$Comp
+L Device:R R1
+U 1 1 5EDDF1FB
+P 3800 3050
+F 0 "R1" H 3870 3096 50  0000 L CNN
+F 1 "3k9" H 3870 3005 50  0000 L CNN
+F 2 "" V 3730 3050 50  0001 C CNN
+F 3 "~" H 3800 3050 50  0001 C CNN
+	1    3800 3050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R2
+U 1 1 5EDE0645
+P 4100 3050
+F 0 "R2" H 4170 3096 50  0000 L CNN
+F 1 "3k9" H 4170 3005 50  0000 L CNN
+F 2 "" V 4030 3050 50  0001 C CNN
+F 3 "~" H 4100 3050 50  0001 C CNN
+	1    4100 3050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4100 2900 4100 2850
+Connection ~ 4100 2850
+Wire Wire Line
+	4100 2850 3800 2850
+Wire Wire Line
+	3800 2900 3800 2850
+Connection ~ 3800 2850
+Wire Wire Line
+	3800 2850 3200 2850
+Wire Wire Line
+	3800 3200 3800 3250
+Wire Wire Line
+	3800 3250 3500 3250
+Connection ~ 3500 3250
+Wire Wire Line
+	3500 3250 3500 3450
+Wire Wire Line
+	4100 3200 4100 3350
+Wire Wire Line
+	4100 3350 3400 3350
+Connection ~ 3400 3350
+Wire Wire Line
+	3400 3350 3400 3550
+Wire Wire Line
+	5850 2900 5850 2850
+Connection ~ 5850 2850
+Wire Wire Line
+	5850 3200 5850 3650
+Connection ~ 5850 3650
+Wire Wire Line
+	3600 3650 5850 3650
+Wire Wire Line
+	5850 2850 6150 2850
+Wire Wire Line
+	5250 3250 6350 3250
+Wire Wire Line
+	5550 3450 6350 3450
+Wire Wire Line
+	5850 3650 6050 3650
+Wire Wire Line
+	6050 3650 6050 4550
+Connection ~ 6050 3650
+Wire Wire Line
+	6050 4550 6950 4550
+Wire Wire Line
+	6050 3650 6350 3650
+Wire Wire Line
+	5550 4200 6150 4200
+Connection ~ 6150 4200
+$EndSCHEMATC
