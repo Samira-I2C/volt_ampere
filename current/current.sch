@@ -1,0 +1,225 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 2
+Title "Messwerterfassung nur Strom"
+Date "2020-01-15"
+Rev "1.0"
+Comp "SY Samira"
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L power:GNDD #PWR02
+U 1 1 5E1D9C87
+P 6350 5050
+F 0 "#PWR02" H 6350 4800 50  0001 C CNN
+F 1 "GNDD" H 6354 4895 50  0000 C CNN
+F 2 "" H 6350 5050 50  0001 C CNN
+F 3 "" H 6350 5050 50  0001 C CNN
+	1    6350 5050
+	1    0    0    -1  
+$EndComp
+NoConn ~ 5250 3150
+Wire Wire Line
+	5250 3250 5450 3250
+Text Notes 4900 3300 1    50   ~ 0
+AD-Wandler
+$Sheet
+S 4700 2550 550  1100
+U 5E1F6B8F
+F0 "ADS1115" 50
+F1 "ADS1115.sch" 50
+F2 "Gnd" I R 5250 2750 50 
+F3 "Vcc" I R 5250 2650 50 
+F4 "Addr" I R 5250 3050 50 
+F5 "Alert" I R 5250 3150 50 
+F6 "A0" I R 5250 3250 50 
+F7 "A1" I R 5250 3350 50 
+F8 "A2" I R 5250 3450 50 
+F9 "A3" I R 5250 3550 50 
+F10 "SCL" I R 5250 2850 50 
+F11 "SDA" I R 5250 2950 50 
+$EndSheet
+$Comp
+L Connector:Conn_01x01_Male J3
+U 1 1 5E334FC6
+P 5500 3050
+F 0 "J3" H 5600 3000 50  0000 R CNN
+F 1 "Addr" H 5650 3100 50  0000 R CNN
+F 2 "" H 5500 3050 50  0001 C CNN
+F 3 "~" H 5500 3050 50  0001 C CNN
+	1    5500 3050
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	5250 3050 5300 3050
+Wire Wire Line
+	5250 3350 5550 3350
+Wire Wire Line
+	5250 2750 5850 2750
+$Comp
+L Connector:Conn_01x04_Male J6
+U 1 1 5ED9B7D9
+P 7050 2950
+F 0 "J6" H 7100 3150 50  0000 R CNN
+F 1 "I2C/5V" H 7000 2900 50  0000 R CNN
+F 2 "" H 7050 2950 50  0001 C CNN
+F 3 "~" H 7050 2950 50  0001 C CNN
+	1    7050 2950
+	-1   0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR01
+U 1 1 5ED9E662
+P 6350 1900
+F 0 "#PWR01" H 6350 1750 50  0001 C CNN
+F 1 "+5V" H 6365 2073 50  0000 C CNN
+F 2 "" H 6350 1900 50  0001 C CNN
+F 3 "" H 6350 1900 50  0001 C CNN
+	1    6350 1900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x03_Male J1
+U 1 1 5EDA9620
+P 4350 4600
+F 0 "J1" V 4400 4850 50  0000 R CNN
+F 1 "Stromsensor_01" V 4300 4900 50  0000 R CNN
+F 2 "" H 4350 4600 50  0001 C CNN
+F 3 "~" H 4350 4600 50  0001 C CNN
+	1    4350 4600
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Connector:Conn_01x03_Male J2
+U 1 1 5EDB0951
+P 5150 4600
+F 0 "J2" V 5200 4850 50  0000 R CNN
+F 1 "Stromsensor_02" V 5100 4900 50  0000 R CNN
+F 2 "" H 5150 4600 50  0001 C CNN
+F 3 "~" H 5150 4600 50  0001 C CNN
+	1    5150 4600
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Connector:Conn_01x03_Male J4
+U 1 1 5EDB2D78
+P 5950 4600
+F 0 "J4" V 6000 4850 50  0000 R CNN
+F 1 "Stromsensor_03" V 5900 4900 50  0000 R CNN
+F 2 "" H 5950 4600 50  0001 C CNN
+F 3 "~" H 5950 4600 50  0001 C CNN
+	1    5950 4600
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Connector:Conn_01x03_Male J5
+U 1 1 5EDB5216
+P 6750 4600
+F 0 "J5" V 6800 4850 50  0000 R CNN
+F 1 "Stromsensor_04" V 6700 4900 50  0000 R CNN
+F 2 "" H 6750 4600 50  0001 C CNN
+F 3 "~" H 6750 4600 50  0001 C CNN
+	1    6750 4600
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	5250 2950 6850 2950
+Wire Wire Line
+	5850 3150 5850 2750
+Wire Wire Line
+	5850 4400 5850 4050
+Wire Wire Line
+	5250 3550 5750 3550
+Wire Wire Line
+	5250 3450 5650 3450
+Connection ~ 5850 4050
+Connection ~ 6650 4050
+Wire Wire Line
+	5850 4050 6650 4050
+Wire Wire Line
+	4250 4050 4250 4400
+Wire Wire Line
+	4350 4150 4350 4400
+Wire Wire Line
+	4250 4050 5050 4050
+Wire Wire Line
+	4350 4150 5150 4150
+Wire Wire Line
+	5050 4400 5050 4050
+Connection ~ 5050 4050
+Wire Wire Line
+	5050 4050 5850 4050
+Wire Wire Line
+	5150 4150 5150 4400
+Wire Wire Line
+	5450 3250 5450 3850
+Wire Wire Line
+	5950 4150 5150 4150
+Connection ~ 5150 4150
+Wire Wire Line
+	5550 3350 5550 3950
+Wire Wire Line
+	5950 4150 5950 4400
+Wire Wire Line
+	6650 4050 6650 4400
+Wire Wire Line
+	5650 3450 5650 3950
+Wire Wire Line
+	6350 4150 5950 4150
+Wire Wire Line
+	6350 4150 6350 5050
+Connection ~ 5950 4150
+Wire Wire Line
+	6350 4150 6750 4150
+Wire Wire Line
+	6750 4150 6750 4400
+Connection ~ 6350 4150
+Wire Wire Line
+	6350 1900 6350 2650
+Connection ~ 6350 2650
+Wire Wire Line
+	6350 2650 6650 2650
+Wire Wire Line
+	5250 2650 6350 2650
+Wire Wire Line
+	5750 3550 5750 3850
+Wire Wire Line
+	5250 3950 5550 3950
+Wire Wire Line
+	5250 3950 5250 4400
+Wire Wire Line
+	5450 3850 4450 3850
+Wire Wire Line
+	4450 3850 4450 4400
+Wire Wire Line
+	6050 3950 5650 3950
+Wire Wire Line
+	6050 3950 6050 4400
+Wire Wire Line
+	6850 3850 5750 3850
+Wire Wire Line
+	6850 3850 6850 4400
+Wire Wire Line
+	6650 2650 6650 3050
+Wire Wire Line
+	5250 2850 6850 2850
+Wire Wire Line
+	6650 3050 6850 3050
+Connection ~ 6650 3050
+Wire Wire Line
+	6650 3050 6650 4050
+Wire Wire Line
+	5850 3150 6750 3150
+Wire Wire Line
+	6750 4150 6750 3150
+Connection ~ 6750 4150
+Connection ~ 6750 3150
+Wire Wire Line
+	6750 3150 6850 3150
+$EndSCHEMATC
